@@ -13,12 +13,8 @@ export const router = [
     path: '',
     controller: WildPokemonController,
     view: /*html*/`
-    <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
-    </div>
+
+      <div class="container-fluid" id="wildPokemon-list"></div>
     `
   },
   {

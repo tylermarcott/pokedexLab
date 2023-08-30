@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js"
 
 
 export class Pokemon {
@@ -8,4 +9,21 @@ export class Pokemon {
     this.type = data.type || data.types.join(',')
     this.creatorId = data.creatorId
   }
+
+
+  static wildListTemplate(pokemon) {
+    return `
+      <p>${pokemon.name}</p>
+    
+    `
+  }
+
+
+
+
+
+
+
+
+
 }
