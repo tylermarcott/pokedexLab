@@ -13,12 +13,18 @@ export class Pokemon {
 
   static wildListTemplate(pokemon) {
     return `
-      <p>${pokemon.name}</p>
+      <p class="selectable text-dark py-1 rounded mb-0" onclick="app.WildPokemonController.setActivePokemon('${pokemon.name}')" >${pokemon.name}</p>
     
     `
   }
 
-
+  get activePokemonTemplate() {
+    return `
+    
+    
+    
+    `
+  }
 
 
 

@@ -14,6 +14,12 @@ function _drawPokemonList() {
 }
 
 
+function _drawActivePokemon() {
+  let activePokemon = AppState.activePokemon
+  setHTML('active-pokemon', activePokemon.activePokemonTemplate())
+}
+
+
 
 
 export class WildPokemonController {
@@ -34,17 +40,15 @@ export class WildPokemonController {
     }
   }
 
-  // async getOnePokemon(index) {
-  //   try {
-  //     console.log(index)
-  //     await wildPokemonService.getOnePokemon(index)
-  //   } catch (error) {
-  //     Pop.error(error)
-  //     console.log(error)
-  //   }
-
-  // }
-
+  async setActivePokemon(name) {
+    try {
+      console.log(name)
+      await wildPokemonService.setActivePokemon(name)
+    } catch (error) {
+      Pop.error(error)
+      console.log(error)
+    }
+  }
 
 
 
