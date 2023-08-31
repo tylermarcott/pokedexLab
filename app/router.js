@@ -14,7 +14,23 @@ export const router = [
     controller: WildPokemonController,
     view: /*html*/`
 
-      <div class="container-fluid" id="wildPokemon-list"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <h2>PokeMaynes</h2>
+      <button>My Pokemon</button>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <section id="wildPokemon-list"></section>
+      </div>
+
+      <div class="col-7">
+        <section id="active-pokemon"></section>
+      </div>
+    </div>
+  </div>
+
     `
   },
   {

@@ -16,7 +16,12 @@ function _drawPokemonList() {
 
 function _drawActivePokemon() {
   let activePokemon = AppState.activePokemon
-  setHTML('active-pokemon', activePokemon.activePokemonTemplate())
+
+  console.log('the following pokemon is active:', activePokemon)
+
+  if (activePokemon) {
+    setHTML('active-pokemon', activePokemon.activePokemonTemplate)
+  }
 }
 
 
@@ -27,6 +32,7 @@ export class WildPokemonController {
     this.getWildPokemon()
 
     AppState.on('wildPokemon', _drawPokemonList)
+    AppState.on('activePokemon', _drawActivePokemon)
   }
 
   // TODO: first, we are going to create an async fxn that will get data from the pokeAPI. Remember, our WildPokemon are what we are getting from the pokemonAPI, and SandboxPokemon is our interaction with the BCW sandbox api.

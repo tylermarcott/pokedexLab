@@ -8,6 +8,7 @@ export class Pokemon {
     this.weight = data.weight
     this.type = data.type || data.types.join(',')
     this.creatorId = data.creatorId
+    this.img = data.sprites.front_default
   }
 
 
@@ -21,7 +22,39 @@ export class Pokemon {
   get activePokemonTemplate() {
     return `
     
-    
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            ${this.name}
+          </div>
+          <div class="row">
+            <img src="${this.img}" alt="bad-img">
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                Height: ${this.height}"
+              </div>
+              <div class="row">
+                Type: ${this.type}
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                Weight: ${this.weight}kg
+              </div>
+              <div class="row">
+                catch button
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-3">
+          List of pokemon in here.
+        </div>
+      </div>
+
     
     `
   }
